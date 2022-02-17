@@ -1,9 +1,10 @@
 /* top */
-.card {
-  width: 800px;
+
+.weather-app {
+  max-width: 800px;
   text-align: center;
-  display: block;
-  margin: 0 auto;
+  margin: 30px auto;
+  padding: 20px;
 }
 
 #location-button {
@@ -16,35 +17,48 @@
   background-color: lightgrey;
 }
 #city {
-  font-weight: 400;
+  font-weight: 500;
   color: #007cb9;
+  font-size: 50px;
+  padding: 10px 0px;
 }
-#date {
-  font-size: 15px;
+p {
+  color: #4c5260;
 }
 
 /* middle */
-#degreeschange {
+#degrees-change {
   font-weight: 500;
   color: #007cb9;
-  font-size: 40px;
+  font-size: 60px;
 }
-.temperature {
-  position: relative;
-  left: 0px;
-  top: -25px;
+.degrees-change .temperature {
   font-size: 15px;
+  position: relative;
+  top: -34px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: black;
 }
 .weather-description {
+  color: #4c5260;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+.weather-details {
+  color: #4c5260;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
 }
 
 /* botton */
 .row-week {
-  height: 50px;
   color: #4c5260;
-  font-size: 20px;
+  font-size: 18px;
+  padding-top: 30px;
 }
 .row-temperature-1 {
   color: #4c5260;
@@ -53,7 +67,4 @@
 .row-temperature-2 {
   color: #939393;
   font-size: 18px;
-}
-.coded {
-  text-align: center;
 }

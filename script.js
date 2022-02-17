@@ -50,7 +50,7 @@ updatedTime.innerHTML = `${day} | ${month} ${date} | ${hours}:${minutes}`;
 function showTemp(response) {
   //change temp
   let temperature = Math.round(response.data.main.temp);
-  let changeTemp = document.querySelector("#degreeschange");
+  let changeTemp = document.querySelector("#degrees-change");
   changeTemp.innerHTML = `${temperature}`;
   //cahnge weather description
   let weatherDescription = response.data.weather[0].description;

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,113 +16,118 @@
       src="https://kit.fontawesome.com/f4efbdf5c1.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <br />
       <br />
-      <div class="card">
-        <div class="card-body">
-          <form id="search-form">
-            <div class="row">
-              <div class="col-8">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="input-city"
-                    placeholder="Enter a city"
-                    autofocus
-                  />
+      <div class="weather-app">
+        <div class="card">
+          <div class="card-body">
+            <form id="search-form">
+              <div class="row">
+                <div class="col-9">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="input-city"
+                      placeholder="Enter a city"
+                      autofocus
+                    />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      class="btn btn-primary shadow-sm"
+                      value="Search"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-light"
+                      id="location-button"
+                    >
+                      <i class="fas fa-location-arrow"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="col-3">
-                <div class="form-group">
-                  <input
-                    type="submit"
-                    class="btn btn-primary shadow-sm"
-                    value="Search"
-                  />
-                  <button
-                    type="button"
-                    class="btn btn-light"
-                    id="location-button"
-                  >
-                    <i class="fas fa-location-arrow"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
-          <h1 id="city">Porto</h1>
+            </form>
+            <h1 id="city">Porto</h1>
 
-          <p id="date">Updated 3 mins ago</p>
+            <p id="date">17/02/2022</p>
 
-          <span class="degres-change" id="degreeschange">22°</span>
-          <span class="temperature">
-            <a href="#" id="celcius-link">°C</a>
-            |
-            <a href="#" id="fahrenheit-link">°F</a>
-          </span>
-          <div class="image">
-            <img src="#" alt="weather-icon" />
-
+            <span class="degrees-change" id="degrees-change">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="weather-icon"
+              />
+              22<span class="temperature">
+                °C |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+            </span>
             <div class="weather-description" id="weather-description">
               Sunny with intermittent clouds
             </div>
 
             <div class="row weather-details" id="weather-details">
-              
-              <div class="col" id="feels-like"> Feels like: 10°C.</div>
-              <div class="col"id="humidity">Humidity:30%</div>
-              
-            <div class="col" id="wind">Wind:20km/h</div>
-          </div>
+              <div class="col" id="feels-like">Feels like : 10°C</div>
+              <div class="col" id="humidity">Humidity: 30%</div>
 
-          <hr />
+              <div class="col" id="wind">Wind: 20km/h</div>
+            </div>
 
-          <div class="row row-week">
-            <div class="col">
-              Monday <br />
-              ☁
+            <div class="row row-week">
+              <div class="col">
+                Monday <br />
+                ☁
+              </div>
+              <div class="col">
+                Tuesday <br />
+                🌥
+              </div>
+              <div class="col">
+                Wednesday <br />
+                🌥
+              </div>
+              <div class="col">Thursday <br />🌤</div>
+              <div class="col">
+                Friday <br />
+                🌤
+              </div>
             </div>
-            <div class="col">
-              Tuesday <br />
-              🌥
+            <br />
+            <div class="row row-temperature-1">
+              <div class="col">12°C</div>
+              <div class="col">15°C</div>
+              <div class="col">16°C</div>
+              <div class="col">18°C</div>
+              <div class="col">20°C</div>
             </div>
-            <div class="col">
-              Wednesday <br />
-              🌥
+            <div class="row row-temperature-2">
+              <div class="col">6°C</div>
+              <div class="col">10°C</div>
+              <div class="col">11°C</div>
+              <div class="col">15°C</div>
+              <div class="col">6°C</div>
             </div>
-            <div class="col">Thursday <br />🌤</div>
-            <div class="col">
-              Friday <br />
-              🌤
-            </div>
-          </div>
-          <br />
-          <div class="row row-temperature-1">
-            <div class="col">12°C</div>
-            <div class="col">15°C</div>
-            <div class="col">16°C</div>
-            <div class="col">18°C</div>
-            <div class="col">20°C</div>
-          </div>
-          <div class="row row-temperature-2">
-            <div class="col">6°C</div>
-            <div class="col">10°C</div>
-            <div class="col">11°C</div>
-            <div class="col">15°C</div>
-            <div class="col">6°C</div>
           </div>
         </div>
+        <small class="coded">
+          This project was coded by Viktoria Nikolova and is open sourced on
+          <a
+            href="https://github.com/viki3612/Weather-app-project"
+            target="_blank"
+            >GitHub
+          </a>
+        </small>
       </div>
     </div>
-   <div class="coded">
-    <a href="https://github.com/viki3612/Weather-app-project">Coded by Viktoria Nikolova </a> 
-   </div>
 
- 
     <script src="script.js"></script>
   </body>
 </html>
