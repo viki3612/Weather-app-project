@@ -1,24 +1,39 @@
 /* top */
-
+body {
+  background: #e8f6ef;
+}
 .weather-app {
   max-width: 800px;
   text-align: center;
   margin: 30px auto;
   padding: 20px;
 }
-
+.card {
+  border: none;
+  border-radius: 16px;
+}
+.btn {
+  background: #b8dfd8;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  height: 50px;
+}
+.search-input {
+  height: 50px;
+  border-radius: 6px;
+}
 #location-button {
   background-color: white;
-  transition: all 200ms ease-in-out;
   border: none;
 }
 #location-button:hover {
   transition: all 200ms ease-in-out;
-  background-color: lightgrey;
+  background-color: #e8f6ef;
 }
 #city {
   font-weight: 500;
-  color: #007cb9;
+  color: #4c4c6d;
   font-size: 50px;
   padding: 10px 0px;
 }
@@ -27,12 +42,15 @@ p {
 }
 
 /* middle */
+img {
+  vertical-align: sub;
+}
 #degrees-change {
   font-weight: 500;
-  color: #007cb9;
+  color: #4c4c6d;
   font-size: 60px;
 }
-.degrees-change .temperature {
+.weather-information .temperature {
   font-size: 15px;
   position: relative;
   top: -34px;
@@ -50,15 +68,16 @@ a:hover {
 }
 .weather-details {
   color: #4c5260;
-  border-bottom: 1px solid #f9f7fe;
+
   padding-bottom: 30px;
 }
 
-/* botton */
+/* bottom */
 .row-week {
   color: #4c5260;
   font-size: 18px;
   padding-top: 30px;
+  border-top: 1px solid #f9f7fe;
 }
 .row-temperature-1 {
   color: #4c5260;
@@ -67,4 +86,10 @@ a:hover {
 .row-temperature-2 {
   color: #939393;
   font-size: 18px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f9f7fe;
+}
+small {
+  margin: 13px;
+  padding: 0px 0 20px;
 }

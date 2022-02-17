@@ -27,22 +27,22 @@
           <div class="card-body">
             <form id="search-form">
               <div class="row">
-                <div class="col-9">
+                <div class="col-8">
                   <div class="form-group">
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control search-input"
                       id="input-city"
                       placeholder="Enter a city"
                       autofocus
                     />
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                   <div class="form-group">
                     <input
                       type="submit"
-                      class="btn btn-primary shadow-sm"
+                      class="btn btn-primary shadow-sm w-75"
                       value="Search"
                     />
                     <button
@@ -59,17 +59,18 @@
             <h1 id="city">Porto</h1>
 
             <p id="date">17/02/2022</p>
-
-            <span class="degrees-change" id="degrees-change">
+            <span class="weather-information">
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                 alt="weather-icon"
               />
-              22<span class="temperature">
+              <span class="degrees-change" id="degrees-change"> 22 </span
+              ><span class="temperature">
                 °C |
                 <a href="#" id="fahrenheit-link">°F</a>
               </span>
             </span>
+
             <div class="weather-description" id="weather-description">
               Sunny with intermittent clouds
             </div>
@@ -82,23 +83,11 @@
             </div>
 
             <div class="row row-week">
-              <div class="col">
-                Monday <br />
-                ☁
-              </div>
-              <div class="col">
-                Tuesday <br />
-                🌥
-              </div>
-              <div class="col">
-                Wednesday <br />
-                🌥
-              </div>
-              <div class="col">Thursday <br />🌤</div>
-              <div class="col">
-                Friday <br />
-                🌤
-              </div>
+              <div class="col">Monday ☁</div>
+              <div class="col">Tuesday 🌥</div>
+              <div class="col">Wednesday 🌥</div>
+              <div class="col">Thursday 🌤</div>
+              <div class="col">Friday 🌤</div>
             </div>
             <br />
             <div class="row row-temperature-1">
@@ -116,15 +105,15 @@
               <div class="col">6°C</div>
             </div>
           </div>
+          <small class="coded">
+            This project was coded by Viktoria Nikolova and is open sourced on
+            <a
+              href="https://github.com/viki3612/Weather-app-project"
+              target="_blank"
+              >GitHub
+            </a>
+          </small>
         </div>
-        <small class="coded">
-          This project was coded by Viktoria Nikolova and is open sourced on
-          <a
-            href="https://github.com/viki3612/Weather-app-project"
-            target="_blank"
-            >GitHub
-          </a>
-        </small>
       </div>
     </div>
 
