@@ -75,14 +75,20 @@ function showTemp(response) {
   let wind = document.querySelector("#wind");
   let fetchedWind = Math.round(response.data.wind.speed);
   wind.innerHTML = `Wind: ${fetchedWind}km/h`;
-  //let wind=response.data.wind.speed;
-  //let changeWind=document.querySelector("#")
-  //check these lines
-  // let icon = document.querySelector("#weather-icon");
-  // let updatedIcon = response.data.weather[0].icon;
-  //let iconUrl = `https://openweathermap.org/img/wn/${updatedIcon}@2x.png`;
-  //icon.innerHTML = `${iconUrl}`;
+  //weather icon
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
+//let wind=response.data.wind.speed;
+//let changeWind=document.querySelector("#")
+//check these lines
+// let icon = document.querySelector("#weather-icon");
+// let updatedIcon = response.data.weather[0].icon;
+//let iconUrl = `https://openweathermap.org/img/wn/${updatedIcon}@2x.png`;
+//icon.innerHTML = `${iconUrl}`;
 //changing the name of city when searched //changing the name of city when searched then triggering to change the temp too
 function search(event) {
   event.preventDefault();

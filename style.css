@@ -43,7 +43,10 @@ p {
 
 /* middle */
 img {
-  vertical-align: sub;
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+  vertical-align: bottom;
 }
 #degrees-change {
   font-weight: 500;
