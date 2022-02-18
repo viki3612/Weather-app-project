@@ -4,8 +4,13 @@ let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
 let date = now.getDate();
 let hours = now.getHours();
+let minutes = now.getMinutes();
+//to transfer digits into integer if the time is e.g 1 am by adding a 0 in front
 if (hours < 10) {
   hours = `0${hours}`;
+}
+if (minutes < 10) {
+  minutes = `0${minutes}`;
 }
 let months = [
   "Jan",
@@ -22,8 +27,6 @@ let months = [
   "Dec",
 ];
 let month = months[now.getMonth()];
-//to transfer digits into integer if the time is e.g 1 am by adding a 0 in front
-let minutes = now.getMinutes();
 
 let updatedTime = document.querySelector("#date");
 updatedTime.innerHTML = `${day} | ${month} ${date} | ${hours}:${minutes}`;
