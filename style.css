@@ -5,7 +5,7 @@ body {
 .weather-app {
   max-width: 800px;
   text-align: center;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 20px;
 }
 .card {
@@ -13,11 +13,12 @@ body {
   border-radius: 16px;
 }
 .btn {
-  background: #b8dfd8;
   font-weight: 500;
   border: none;
   border-radius: 6px;
   height: 50px;
+  transition: ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s;
 }
 .search-input {
   height: 50px;
@@ -74,7 +75,6 @@ a:hover {
 }
 .weather-details {
   color: #4c5260;
-
   padding-bottom: 30px;
 }
 
