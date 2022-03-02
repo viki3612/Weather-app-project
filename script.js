@@ -32,28 +32,35 @@ let updatedTime = document.querySelector("#date");
 updatedTime.innerHTML = `${day} | ${month} ${date} | ${hours}:${minutes}`;
 
 //transfer degrees between fahrenheit and celcius
-//function showFahrenheit(event) {
-//event.preventDefault();
-//let celciusdegrees = document.querySelector("#degreeschange");
-// let fahrenheitcalc = Math.round((celciusTemperature * 9) / 5 + 32);
-// celciusdegrees.innerHTML = `${fahrenheitcalc}`;
-//}
+function showFahrenheit(event) {
+  event.preventDefault();
+  let celciusElement = document.querySelector("#degrees-change");
+  //remove active class from celcius link
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitCalc = Math.round((celciusTemp * 9) / 5 + 32);
+  celciusElement.innerHTML = fahrenheitCalc;
+}
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+//adding a global variable that will recieve the value from the api call
+let celciusTemp = null;
 
-//let fahrenheit = document.querySelector("#fahrenheit-link");
-//fahrenheit.addEventListener("click", showFahrenheit);
+function showCelcius() {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let updatetocelcius = document.querySelector("#degrees-change");
+  updatetocelcius.innerHTML = Math.round(celciusTemp);
+}
 
-//function showCelcius() {
-//let updatetocelcius = document.querySelector("#degreeschange");
-//updatetocelcius.innerHTML = "22";
-//}
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelcius);
 
-//let celcius = document.querySelector("#celcius-link");
-//celcius.addEventListener("click", showCelcius);
-
-//added api to search function
+//change temp
 function showTemp(response) {
-  //change temp
-  let temperature = Math.round(response.data.main.temp);
+  celciusTemp = response.data.main.temp;
+  let temperature = Math.round(celciusTemp);
   let changeTemp = document.querySelector("#degrees-change");
   changeTemp.innerHTML = `${temperature}`;
 
@@ -84,16 +91,16 @@ function showTemp(response) {
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
-//changing the name of city when searched //changing the name of city when searched then triggering to change the temp too
+//getting the url and triggering rest of changes
 function search(event) {
   event.preventDefault();
-  let updated = document.querySelector("#city");
   let newCity = document.querySelector("#input-city");
-  updated.innerHTML = `${newCity.value}`;
+  newCity.innerHTML = `${newCity.value}`;
   let apiKey = "c8b7f437a6d44cbd5a4a488b2e517d13";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${newCity.value}&appid=${apiKey}&units=metric`;
   axios.get(url).then(showTemp);
 }
+
 let enterCity = document.querySelector("#search-form");
 enterCity.addEventListener("submit", search);
 

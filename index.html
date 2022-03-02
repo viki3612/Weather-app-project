@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Week-5-Homework</title>
+    <title>Week-7-Homework</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -68,7 +68,7 @@
               />
               <span class="degrees-change" id="degrees-change"> 22 </span>
               <span class="temperature">
-                <a href="#" id="celcius-link">°C</a>
+                <a href="#" id="celcius-link" class="active">°C</a>
                 |
                 <a href="#" id="fahrenheit-link">°F</a>
               </span>
@@ -84,28 +84,60 @@
 
               <div class="col" id="wind">Wind: 20km/h</div>
             </div>
+            <div class="weather-forecast">
+              <div class="row">
+                <div class="col">
+                  <div class="weather-forecast-day">Mon</div>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Mon weather icon"
+                  />
+                </div>
 
-            <div class="row row-week">
-              <div class="col">Monday ☁</div>
-              <div class="col">Tuesday 🌥</div>
-              <div class="col">Wednesday 🌥</div>
-              <div class="col">Thursday 🌤</div>
-              <div class="col">Friday 🌤</div>
+                <div class="col">
+                  <div class="weather-forecast-day">Tue</div>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Tue weather icon"
+                  />
+                </div>
+                <div class="col">
+                  <div class="weather-forecast-day">Wed</div>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Wed weather icon"
+                  />
+                </div>
+                <div class="col">
+                  <div class="weather-forecast-day">Thu</div>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Thu weather icon"
+                  />
+                </div>
+                <div class="col-2">
+                  <div class="weather-forecast-day">Fri</div>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Fri weather icon"
+                  />
+                </div>
+              </div>
             </div>
-            <br />
-            <div class="row row-temperature-1">
+
+            <div class="row row-temperature-max">
               <div class="col">12°C</div>
               <div class="col">15°C</div>
               <div class="col">16°C</div>
               <div class="col">18°C</div>
-              <div class="col">20°C</div>
+              <div class="col-2">20°C</div>
             </div>
-            <div class="row row-temperature-2">
+            <div class="row row-temperature-min">
               <div class="col">6°C</div>
               <div class="col">10°C</div>
               <div class="col">11°C</div>
               <div class="col">15°C</div>
-              <div class="col">6°C</div>
+              <div class="col-2">6°C</div>
             </div>
           </div>
           <small class="coded">

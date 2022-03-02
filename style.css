@@ -40,10 +40,11 @@ body {
 }
 p {
   color: #4c5260;
+  font-size: 13px;
 }
 
 /* middle */
-img {
+#weather-icon {
   margin-right: 5px;
   height: 64px;
   width: 64px;
@@ -52,18 +53,21 @@ img {
 #degrees-change {
   font-weight: 500;
   color: #4c4c6d;
-  font-size: 60px;
+  font-size: 70px;
 }
 .weather-information .temperature {
-  font-size: 15px;
   position: relative;
   top: -34px;
 }
+.active {
+  color: #4c4c6d;
+  cursor: default;
+}
+.active:hover {
+  color: #4c4c6d;
+}
 a {
   text-decoration: none;
-}
-a:hover {
-  color: black;
 }
 .weather-description {
   color: #4c5260;
@@ -76,22 +80,25 @@ a:hover {
 .weather-details {
   color: #4c5260;
   padding-bottom: 30px;
+  font-size: 16px;
 }
 
 /* bottom */
-.row-week {
-  color: #4c5260;
-  font-size: 18px;
+.weather-forecast {
   padding-top: 30px;
   border-top: 1px solid #f9f7fe;
 }
-.row-temperature-1 {
+.weather-forecast-day {
+  font-size: 16px;
   color: #4c5260;
-  font-size: 18px;
 }
-.row-temperature-2 {
+.row-temperature-max {
+  color: #4c5260;
+  font-size: 13px;
+}
+.row-temperature-min {
   color: #939393;
-  font-size: 18px;
+  font-size: 13px;
   padding-bottom: 30px;
   border-bottom: 1px solid #f9f7fe;
 }
