@@ -65,8 +65,30 @@ function getForecast(coordinates) {
 }
 //forecast function
 function showForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+    <div class="weather-forecast-day">${forecastDay.dt}</div>
+                  <img
+                    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+                    alt="weather icon"
+                  />
+                </div>
+                <div class="row row-temperature-max">
+              <div class="col">${forecastDay.temp.max}°</div> 
+              </div>
+              <div class="row row-temperature-min">
+              <div class="col">${forecastDay.temp.min}°</div>
+                </div>
+                `;
+  });
 }
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
 
 //change temp
 function showTemp(response) {
