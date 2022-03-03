@@ -57,6 +57,17 @@ function showCelcius() {
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelcius);
 
+//define forecast fnction
+function getForecast(coordinates) {
+  let apiKey = "c8b7f437a6d44cbd5a4a488b2e517d13";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+}
+//forecast function
+function showForecast(response) {
+  console.log(response.data.daily);
+}
+
 //change temp
 function showTemp(response) {
   celciusTemp = response.data.main.temp;
@@ -90,6 +101,8 @@ function showTemp(response) {
     "src",
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  //cal this fction that will receive the coordinates of the searched city
+  getForecast(response.data.coord);
 }
 //getting the url and triggering rest of changes
 function search(event) {
