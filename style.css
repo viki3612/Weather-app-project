@@ -3,7 +3,7 @@ body {
   background: #e8f6ef;
 }
 .weather-app {
-  max-width: 800px;
+  max-width: 960px;
   text-align: center;
   margin: 0 auto;
   padding: 20px;
@@ -40,14 +40,14 @@ body {
 }
 p {
   color: #4c5260;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* middle */
 #weather-icon {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 85px;
+  width: 85px;
   vertical-align: bottom;
 }
 #degrees-change {
@@ -92,15 +92,17 @@ a {
   font-size: 16px;
   color: #4c5260;
 }
-.row-temperature-max {
+.temperature-max {
   color: #4c5260;
   font-size: 13px;
+  text-align: center;
 }
-.row-temperature-min {
+.temperature-min {
   color: #939393;
   font-size: 13px;
   padding-bottom: 30px;
   border-bottom: 1px solid #f9f7fe;
+  text-align: center;
 }
 small {
   margin: 13px;
