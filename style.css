@@ -85,8 +85,15 @@ a {
 
 /* bottom */
 .weather-forecast {
-  padding-top: 30px;
   border-top: 1px solid #f9f7fe;
+  padding: 30px 20px 0px;
+}
+.col-2-edit {
+  width: 130px;
+  margin: 0 auto;
+  background-color: orangered;
+  text-align: center;
+  border-radius: 15px;
 }
 .weather-forecast-day {
   font-size: 16px;
@@ -106,5 +113,5 @@ a {
 }
 small {
   margin: 13px;
-  padding: 0px 0 20px;
+  padding: 10px;
 }
