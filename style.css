@@ -1,6 +1,5 @@
-/* top */
 body {
-  background: #e8f6ef;
+  background: #eee;
 }
 .weather-app {
   max-width: 960px;
@@ -8,25 +7,31 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
 .card {
   border: none;
   border-radius: 16px;
 }
-.btn {
-  font-weight: 500;
-  border: none;
-  border-radius: 6px;
-  height: 50px;
-  transition: ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s;
-}
+
 .search-input {
   height: 50px;
   border-radius: 6px;
 }
+
+#search-button {
+  margin-left: -240px;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  height: 50px;
+
+  transition: all 300ms ease-in-out;
+}
 #location-button {
   background-color: white;
-  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  height: 50px;
 }
 #location-button:hover {
   transition: all 200ms ease-in-out;
@@ -86,19 +91,19 @@ a {
 /* bottom */
 .weather-forecast {
   border-top: 1px solid #f9f7fe;
-  padding: 30px 20px 0px;
+  padding: 30px 20px 30px;
+  border-bottom: 1px solid #f9f7fe;
 }
 .col-2-edit {
   width: 130px;
   margin: 0 auto;
-  background-color: orangered;
+  background-color: transparent;
+  border: 1px solid #939393;
   text-align: center;
   border-radius: 15px;
+  padding: 15px;
 }
-.weather-forecast-day {
-  font-size: 16px;
-  color: #4c5260;
-}
+
 .temperature-max {
   color: #4c5260;
   font-size: 13px;
@@ -107,8 +112,6 @@ a {
 .temperature-min {
   color: #939393;
   font-size: 13px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #f9f7fe;
   text-align: center;
 }
 small {
