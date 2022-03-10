@@ -6,6 +6,7 @@ body {
   border: none;
   border-radius: 16px;
   background-size: cover;
+  margin-bottom: 20px;
 }
 
 .weather-app {
@@ -119,9 +120,9 @@ a:hover {
   font-size: 13px;
   text-align: center;
 }
-small {
-  margin: 13px;
-  padding: 10px;
-
+.coded {
   color: #4c4c6d;
+}
+.github-link {
+  color: #23689b;
 }
