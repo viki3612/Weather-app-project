@@ -45,7 +45,7 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
 //adding a global variable that will recieve the value from the api call
 let celciusTemp = null;
-
+//making celcius link active
 function showCelcius() {
   event.preventDefault();
   celciusLink.classList.add("active");
