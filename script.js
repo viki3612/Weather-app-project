@@ -70,7 +70,6 @@ function getForecast(coordinates) {
   let apiKey = "c8b7f437a6d44cbd5a4a488b2e517d13";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showForecast);
-  console.log(coordinates);
 }
 //forecast function
 function showForecast(response) {
@@ -117,6 +116,7 @@ function showTemp(response) {
   let weatherDescription = response.data.weather[0].description;
   let updatedDescription = document.querySelector("#weather-description");
   updatedDescription.innerHTML = `${weatherDescription}`;
+
   //cange name of city based on geolocation
   let city = document.querySelector("#city");
   let changedCity = response.data.name;
@@ -139,6 +139,7 @@ function showTemp(response) {
     "src",
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
   //cal this fction that will receive the coordinates of the searched city
   getForecast(response.data.coord);
 }

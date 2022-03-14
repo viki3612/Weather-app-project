@@ -7,13 +7,14 @@ body {
   border-radius: 16px;
   background-size: cover;
   margin-bottom: 20px;
+  padding: 0px 25px;
 }
 
 .weather-app {
   max-width: 960px;
   text-align: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 }
 
 .search-input {
@@ -23,24 +24,25 @@ body {
 
 #search-button {
   margin-left: -240px;
-  background-color: white;
+  background-color: white 0.95;
   padding: 10px 20px;
   border-radius: 6px;
   height: 50px;
   border: 1px solid #ced4da;
-
-  transition: all 300ms ease-in-out;
-}
-#location-button {
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  height: 50px;
-  border: 1px solid #ced4da;
-}
-#location-button:hover {
   transition: all 200ms ease-in-out;
-  background-color: #e8f6ef;
+}
+
+#location-button {
+  background-color: white 0.95;
+  padding: 10px 20px;
+  border-radius: 6px;
+  height: 50px;
+  border: 1px solid #ced4da;
+}
+#location-button:hover,
+#search-button:hover {
+  transition: all 200ms ease-in-out;
+  background-color: #ffff;
 }
 #city {
   font-weight: 500;
@@ -70,13 +72,12 @@ p {
 .active {
   color: white;
   cursor: default;
-
   font-weight: bold;
 }
 
 a {
   text-decoration: none;
-  color: darkgray;
+  color: #ced4da;
   transition: all 0.5s ease-out;
 }
 a:hover {
@@ -90,21 +91,21 @@ a:hover {
   text-transform: capitalize;
 }
 .weather-details {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: 16px;
 }
 
 /* bottom */
+
 .weather-forecast {
-  border-top: 1px solid #f9f7fe;
-  padding: 30px 20px 30px;
-  border-bottom: 1px solid #f9f7fe;
+  padding: 8px 0px 30px;
 }
 .col-2-edit {
   width: 130px;
   margin: 0 auto;
   background-color: transparent;
   border: 1px solid #ced4da;
+  box-shadow: 4px 4px 10px #4c4c6d;
   text-align: center;
   border-radius: 15px;
   padding: 15px;
