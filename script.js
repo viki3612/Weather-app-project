@@ -142,6 +142,7 @@ function showTemp(response) {
 
   //cal this fction that will receive the coordinates of the searched city
   getForecast(response.data.coord);
+  getMain();
 }
 //getting the url and triggering rest of changes
 function search(newCity) {
