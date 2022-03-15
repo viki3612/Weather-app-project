@@ -24,16 +24,15 @@ body {
 
 #search-button {
   margin-left: -240px;
-  background-color: white 0.95;
+  background-color: white;
   padding: 10px 20px;
   border-radius: 6px;
   height: 50px;
   border: 1px solid #ced4da;
-  transition: all 200ms ease-in-out;
 }
 
 #location-button {
-  background-color: white 0.95;
+  background-color: white;
   padding: 10px 20px;
   border-radius: 6px;
   height: 50px;
@@ -42,11 +41,10 @@ body {
 #location-button:hover,
 #search-button:hover {
   transition: all 200ms ease-in-out;
-  background-color: #ffff;
+  box-shadow: 1px 1px 8px 0.8px #3575f4;
 }
 #city {
   font-weight: 500;
-
   font-size: 50px;
   padding: 10px 0px;
 }
@@ -86,6 +84,7 @@ a:hover {
 .weather-description {
   padding-top: 10px;
   padding-bottom: 20px;
+  font-weight: 500;
 }
 .weather-description:first-letter {
   text-transform: capitalize;
