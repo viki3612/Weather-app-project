@@ -31,40 +31,6 @@ let month = months[now.getMonth()];
 let updatedTime = document.querySelector("#date");
 updatedTime.innerHTML = `${day} | ${month} ${date} | ${hours}:${minutes}`;
 
-//transfer degrees between fahrenheit and celcius
-function showFahrenheit(event) {
-  event.preventDefault();
-  let celciusElement = document.querySelector("#degrees-change");
-  //remove active class from celcius link
-  celciusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitCalc = Math.round((celciusTemp * 9) / 5 + 32);
-  celciusElement.innerHTML = fahrenheitCalc;
-}
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheit);
-//adding a global variable that will recieve the value from the api call
-let celciusTemp = null;
-//making celcius link active
-function showCelcius() {
-  event.preventDefault();
-  celciusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let updatetocelcius = document.querySelector("#degrees-change");
-  updatetocelcius.innerHTML = Math.round(celciusTemp);
-}
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", showCelcius);
-
-// formatting the timestamp
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let day = days[date.getDay()];
-  return day;
-}
-
 //define forecast fnction
 function getForecast(coordinates) {
   let apiKey = "c8b7f437a6d44cbd5a4a488b2e517d13";
@@ -104,6 +70,13 @@ function showForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+// formatting the timestamp
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[date.getDay()];
+  return day;
+}
 
 //change temp
 function showTemp(response) {
@@ -111,6 +84,8 @@ function showTemp(response) {
   let temperature = Math.round(celciusTemp);
   let changeTemp = document.querySelector("#degrees-change");
   changeTemp.innerHTML = `${temperature}`;
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 
   //cahnge weather description
   let weatherDescription = response.data.weather[0].description;
@@ -142,12 +117,12 @@ function showTemp(response) {
 
   //cal this fction that will receive the coordinates of the searched city
   getForecast(response.data.coord);
-  getMain();
 }
 //getting the url and triggering rest of changes
 function search(newCity) {
   let apiKey = "c8b7f437a6d44cbd5a4a488b2e517d13";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}&units=metric`;
+
   axios.get(url).then(showTemp);
 }
 
@@ -175,3 +150,30 @@ let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", geoLocation);
 
 search("Porto");
+
+//transfer degrees between fahrenheit and celcius
+function showFahrenheit(event) {
+  event.preventDefault();
+  let celciusElement = document.querySelector("#degrees-change");
+  //remove active class from celcius link
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitCalc = Math.round((celciusTemp * 9) / 5 + 32);
+  console.log(celciusTemp);
+  celciusElement.innerHTML = fahrenheitCalc;
+}
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+//adding a global variable that will recieve the value from the api call
+//let celciusTemp = null;
+//making celcius link active
+function showCelcius(event) {
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let updatetocelcius = document.querySelector("#degrees-change");
+  updatetocelcius.innerHTML = Math.round(celciusTemp);
+}
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelcius);
