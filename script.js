@@ -139,7 +139,7 @@ enterCity.addEventListener("submit", handleSubmit);
 function currentLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let apiKey = "c8b7f437a6d44cbd5a4a488b2e517d13";
+  let apiKey = "8cac06f7ab6c10287cd06a316ff84a57";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(url).then(showTemp);
 }
