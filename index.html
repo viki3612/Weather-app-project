@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Weather app </title>
+    <title>Weather app</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,31 +19,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  
-      <br />
-      <br />
-      <div class="weather-app">
-        <div class="card" id="wrapper-background"
-          style="background-image: url('icons/clear-sky.gif');"
-               
-          >
-          <div class="card-body">
-            <form id="search-form">
-              <div class="row">
-                <div class="col-7">
-                  <div class="form-group">
-          
-                    <input
-                      type="text"
-                      class="form-control search-input"
-                      id="input-city"
-                      placeholder="Enter a city"
-                      autofocus
-                    />
-                  </div>
+    <br />
+    <br />
+    <div class="weather-app">
+      <div
+        class="card"
+        id="wrapper-background"
+        style="background-image: url('icons/clear-sky.gif')"
+      >
+        <div class="card-body">
+          <form id="search-form">
+            <div class="row row-search">
+              <div class="col-7">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control search-input"
+                    id="input-city"
+                    placeholder="Enter a city"
+                    autofocus
+                  />
                 </div>
-                
-                <div class="col">
+              </div>
+
+               <div class="col-3 col-buttons">
                  <button id="search-button" >
                   <i class="fas fa-search"></i>
                 </button>
@@ -54,64 +53,57 @@
                 </div>
               </div>
             </form>
-           
-            <h1 id="city">Porto</h1>
 
-            <p id="date">17/02/2022</p>
-            <span class="weather-information">
-              <img
-                src=""
-                alt="weather-icon"
-                id="weather-icon"
-              />
-              <span class="degrees-change" id="degrees-change"> 22 </span>
-              <span class="temperature">
-                <a href="#" id="celcius-link" class="active">°C</a>
-                |
-                <a href="#" id="fahrenheit-link">°F</a>
-              </span>
-              </span>
-           
-            
-            <div class="weather-description" id="weather-description">
-              Sunny with intermittent clouds
-            </div>
-            
-            <div class="row weather-details" id="weather-details">
-              <div class="col" id="feels-like">Feels like : 10°C</div>
-              <div class="col" id="humidity">Humidity: 30%</div>
-              <div class="col" id="wind">Wind: 20km/h</div>
-            </div>
-            
-            <hr />
-         
-            <div class="weather-forecast" id="weather-forecast">
-<div class="row">
-  
-  
-  <div class="col-2 col-2-edit">
-   
-  </div>
-</div>
-</div>
-</div>
-<small class="coded"> This project is coded by Viktoria Nikolova and is 
-  <a
-  href="https://github.com/viki3612/Weather-app-project"
-  target="_blank"
-  class="github-link"
-  >
-open sourced
-</a>
-and
-<a
-  href="https://weather-app-viktorianikolova.netlify.app"
-  target="_blank"
-  class="github-link"> hosted on Netlify
-</a>
-</small>
-</div>
-    
+        <h1 id="city">Porto</h1>
+
+        <p id="date">17/02/2022</p>
+        <span class="weather-information">
+          <img src="" alt="weather-icon" id="weather-icon" />
+          <span class="degrees-change" id="degrees-change"> 22 </span>
+          <span class="temperature">
+            <a href="#" id="celcius-link" class="active">°C</a>
+            |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </span>
+        </span>
+
+        <div class="weather-description" id="weather-description">
+          Sunny with intermittent clouds
+        </div>
+
+        <div class="row weather-details" id="weather-details">
+          <div class="col" id="feels-like">Feels like : 10°C</div>
+          <div class="col" id="humidity">Humidity: 30%</div>
+          <div class="col" id="wind">Wind: 20km/h</div>
+        </div>
+
+        <hr />
+
+        <div class="weather-forecast" id="weather-forecast">
+          <div class="row row-forecast">
+            <div class="col col-2-edit"></div>
+          </div>
+        </div>
+      </div>
+      <small class="coded">
+        This project is coded by Viktoria Nikolova and is
+        <a
+          href="https://github.com/viki3612/Weather-app-project"
+          target="_blank"
+          class="github-link"
+        >
+          open sourced
+        </a>
+        and
+        <a
+          href="https://weather-app-viktorianikolova.netlify.app"
+          target="_blank"
+          class="github-link"
+        >
+          hosted on Netlify
+        </a>
+      </small>
+    </div>
 
     <script src="script.js"></script>
   </body>

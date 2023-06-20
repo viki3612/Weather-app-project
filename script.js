@@ -41,12 +41,12 @@ function getForecast(coordinates) {
 function showForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row row-forecast">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2 col-2-edit">
+        `<div class="col col-2-edit">
     <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
                   <img
                     src="http://openweathermap.org/img/wn/${

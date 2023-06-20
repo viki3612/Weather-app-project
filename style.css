@@ -21,22 +21,24 @@ body {
   height: 50px;
   border-radius: 6px;
 }
-
-#search-button {
-  margin-left: -240px;
-  background-color: white 0.98;
-  padding: 10px 20px;
-  border-radius: 6px;
-  height: 50px;
-  border: 1px solid #ced4da;
+.row-search {
+  max-width: 100%;
 }
 
+#search-button,
 #location-button {
   background-color: white 0.98;
   padding: 10px 20px;
   border-radius: 6px;
   height: 50px;
   border: 1px solid #ced4da;
+}
+.col-buttons {
+  display: flex;
+}
+
+#search-button {
+  margin-right: 5px;
 }
 #location-button:hover,
 #search-button:hover {
@@ -102,9 +104,12 @@ a:hover {
 .weather-forecast {
   padding: 10px 0px 30px;
 }
+.row-forecast {
+  display: flex;
+  justify-content: space-evenly;
+}
 .col-2-edit {
-  width: 130px;
-  margin: 0 auto;
+  margin: 10px;
   background-color: transparent;
   border: 1px solid #ced4da;
   box-shadow: 4px 4px 10px #4c4c6d;
